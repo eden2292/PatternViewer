@@ -1,8 +1,27 @@
-﻿
+﻿@using PatternViewer.Client.Classes;
+@using System.Data
+
 <MudNavMenu>
     <MudNavLink Href="" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home">Home</MudNavLink>
-    <MudNavLink Href="counter" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Add">Counter</MudNavLink>
-    <MudNavLink Href="weather" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Weather</MudNavLink>
+    <MudNavLink Href="newPattern" Match="NavLinkMatch.Prefix" Icon="@Icons.Custom.FileFormats.FilePdf">New Pattern</MudNavLink>
+    @if (_listOfPatterns != null)
+    {
+        @foreach (string patternName in _listOfPatterns)
+        {
+            <MudNavLink Href="patternView" Match="NavLinkMatch.All" Icon="@Icons.Material.Rounded.Star">@($"{patternName}")</MudNavLink>
+        }
+    }
 </MudNavMenu>
 
+@code {
 
+    private List<string> _listOfPatterns = [];
+
+    protected override void OnInitialized()
+    {
+        Pattern pattern = new Pattern();
+        DataTable dt = pattern.TryGetPatternNames();
+        _listOfPatterns = pattern.PatternNames(dt);
+    }
+
+}
