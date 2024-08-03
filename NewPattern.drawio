@@ -5,43 +5,43 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="730" height="440" as="geometry" />
+          <mxGeometry x="40" y="40" width="560" height="440" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="440" width="730" height="40" as="geometry" />
+          <mxGeometry x="40" y="440" width="560" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-5" value="Yarn Brand/Type" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="80" y="80" width="240" height="40" as="geometry" />
+          <mxGeometry x="80" y="80" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-6" value="Colourway" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="80" y="120" width="240" height="40" as="geometry" />
+          <mxGeometry x="80" y="120" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-7" value="Weight" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="80" y="160" width="240" height="40" as="geometry" />
+          <mxGeometry x="80" y="160" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-8" value="Washing information" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="80" y="200" width="240" height="40" as="geometry" />
+          <mxGeometry x="80" y="200" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-9" value="Crochet or Knitting" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="80" y="240" width="240" height="40" as="geometry" />
+          <mxGeometry x="80" y="240" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-10" value="Needle/Hook size" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="80" y="280" width="240" height="40" as="geometry" />
+          <mxGeometry x="80" y="280" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-11" value="Existing Row if worked on already" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="80" y="320" width="240" height="40" as="geometry" />
+          <mxGeometry x="80" y="320" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-12" value="PDF Uploader...Drag and drop?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="80" width="350" height="40" as="geometry" />
+          <mxGeometry x="280" y="80" width="280" height="40" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-13" value="Browse" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="410" y="130" width="120" height="30" as="geometry" />
+          <mxGeometry x="290" y="125" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-14" value="Upload" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="550" y="130" width="120" height="30" as="geometry" />
+          <mxGeometry x="430" y="125" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-15" value="Preview" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="414" y="180" width="256" height="180" as="geometry" />
+          <mxGeometry x="292" y="170" width="256" height="180" as="geometry" />
         </mxCell>
         <mxCell id="nD5dWBQjU6sKopP_t2Rm-16" value="TextBox&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22410%22%20y%3D%22130%22%20width%3D%22120%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="40" y="520" width="200" height="80" as="geometry" />
