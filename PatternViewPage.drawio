@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36" version="24.7.6">
+  <diagram name="Page-1" id="7Px3E-7JTwKbySxBLWw9">
+    <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lVN8dgGofVHCohqbqAhD-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="560" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="480" width="560" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-3" value="Stitch/Row count" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="60" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-4" value="-" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="110" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-5" value="+" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="110" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-6" value="INFO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="240" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-8" value="PDF viewer.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Need to display full A4 page &amp;amp; have zoom capability.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="60" width="330" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="lVN8dgGofVHCohqbqAhD-3" target="lVN8dgGofVHCohqbqAhD-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-10" value="Stitch/Row count" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="140" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-11" value="-" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-12" value="+" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-13" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="560" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1000" width="560" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-15" value="Stitch/Row count" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="580" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-16" value="-" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="630" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-17" value="+" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="630" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-18" value="INFO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="760" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-19" value="PDF viewer.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Need to display full A4 page &amp;amp; have zoom capability.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="580" width="220" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="lVN8dgGofVHCohqbqAhD-15" target="lVN8dgGofVHCohqbqAhD-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-21" value="Stitch/Row count" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="660" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-22" value="-" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="710" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-23" value="+" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="710" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-24" value="Stored patterns in burger menu" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="560" width="120" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-25" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="47" y="485" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="1005" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-27" value="Full page display" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="490" y="20" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-28" value="Display with burger menu open" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="420" y="540" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-29" value="Pattern Name" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="485" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-30" value="Pattern Name" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1005" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
