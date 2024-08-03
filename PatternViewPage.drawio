@@ -80,10 +80,16 @@
           <mxGeometry x="45" y="1005" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lVN8dgGofVHCohqbqAhD-27" value="Full page display" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="480" y="485" width="120" height="30" as="geometry" />
+          <mxGeometry x="490" y="20" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="lVN8dgGofVHCohqbqAhD-28" value="Display with burger menu open" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="420" y="1005" width="180" height="30" as="geometry" />
+          <mxGeometry x="420" y="540" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-29" value="Pattern Name" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="485" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lVN8dgGofVHCohqbqAhD-30" value="Pattern Name" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="1005" width="110" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
