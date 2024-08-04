@@ -1,0 +1,94 @@
+﻿@using PatternViewer.Client.Classes;
+@using System.Data
+
+@page "/newPattern"
+
+<MudText Typo="Typo.h4">New Pattern</MudText>
+
+<MudContainer MaxWidth="MaxWidth.Small">
+  <MudPaper>
+    <MudTextField Value="HelperText" Label="Pattern Name" Variant="Variant.Outlined" Required ="true"/>
+    <MudTextField Value="HelperText" Label="Yarn Brand" Variant="Variant.Outlined"/>
+    <MudTextField Value="HelperText" Label="Colourway" Variant="Variant.Outlined"/>
+    <MudSelect T="string" Label="Weight" Variant="Variant.Outlined">
+      @foreach(string yarnWeight in _listOfWeights)
+      {
+        <MudSelectItem Value="@yarnWeight"/>
+      }
+    </MudSelect>
+    <MudToggleGroup @bind-Value ="CraftType" T="string" Outlined="true" Size ="Size.Medium" Delimiters ="true">
+      <MudToggleItem Value="@("Knitting")"/>
+      <MudToggleItem Value="@("Crochet")"/>
+    </MudToggleGroup>
+    <MudRadioGroup @bind-Value ="SelectedToolOption">
+      <MudRadio Value=@("Metric")>Metric</MudRadio>
+      <MudRadio Value=@("UK")>UK</MudRadio>
+      <MudRadio Value=@("US")>US</MudRadio>
+    </MudRadioGroup>
+    @if(CraftType == "Knitting")
+    {
+      <MudSelect T="string" Label="Needle Size" Variant="Variant.Outlined">
+        @foreach (string needleSize in _listOfSizes)
+        {
+          <MudSelectItem Value="@needleSize" />
+        }
+      </MudSelect>
+    }
+    else
+    {
+      <MudSelect T="string" Label="Hook Size" Variant="Variant.Outlined">
+        @foreach (string hookSize in _listOfSizes)
+        {
+          <MudSelectItem Value="@hookSize" />
+        }
+      </MudSelect>
+    }
+    <MudSelect T="string" Label="Weight" Variant="Variant.Outlined">
+      @foreach (string yarnWeight in _listOfWeights)
+      {
+        <MudSelectItem Value="@yarnWeight" />
+      }
+    </MudSelect>
+    <MudTextField Value="HelperText" Label="Washing Instructions" Variant="Variant.Outlined"/>
+    <MudTextField Value="HelperText" Label="Existing row?" Variant="Variant.Outlined"/>
+  </MudPaper>
+</MudContainer>
+
+@code {
+  Yarn yarn = new Yarn();
+  Tool tool = new Tool();
+
+  private int currentCount = 0;
+  private string selectedSizeOption;
+
+  public string HelperText { get; set; }
+  public string CraftType { get; set; }
+
+  public string SelectedToolOption
+  {
+    get => selectedSizeOption;
+    set
+    {
+      selectedSizeOption = value;
+      tool.SelectedOption = value; 
+    }
+  }
+
+  private void IncrementCount()
+  {
+    currentCount++;
+  }
+
+  private List<string> _listOfWeights = [];
+  private List<string> _listOfSizes = [];
+
+  protected override void OnInitialized()
+  {
+    DataTable dt = yarn.TryGetYarnWeights();
+    DataTable sizeDt = tool.TryGetToolSize();
+    _listOfWeights = yarn.YarnWeights(dt);
+    _listOfSizes = tool.ToolSizes(sizeDt);
+
+  }
+}
+

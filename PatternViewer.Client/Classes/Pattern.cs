@@ -28,7 +28,7 @@ namespace PatternViewer.Client.Classes
     /// Create a List of pattern names from the data table
     /// </summary>
     /// <param name="dt">The data table</param>
-    /// <returns></returns>
+    /// <returns>A list of pattern names</returns>
     public List<string> PatternNames(DataTable dt)
     {
       List<string> patternNames = new List<string>();
