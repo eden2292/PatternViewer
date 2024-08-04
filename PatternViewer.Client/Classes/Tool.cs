@@ -40,7 +40,22 @@ namespace PatternViewer.Client.Classes
       List<string> toolSizes = [];
       foreach (DataRow dr in sizeDt.Rows)
       {
-        string toolSize = dr.ToString();
+        string toolSize = string.Empty;
+        switch(SelectedOption)
+        {
+          case "Metric":
+            toolSize = dr["Metric"].ToString();
+            break;
+          case "US":
+            toolSize = dr["USSize"].ToString();
+            break;
+          case "UK":
+            toolSize = dr["UKSize"].ToString();
+            break;
+          default:
+            toolSize = dr["Metric"].ToString();
+            break;
+        }
         toolSizes.Add(toolSize);
       }
       return toolSizes;

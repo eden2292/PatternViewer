@@ -20,10 +20,10 @@
       <MudToggleItem Value="@("Knitting")"/>
       <MudToggleItem Value="@("Crochet")"/>
     </MudToggleGroup>
-    <MudRadioGroup @bind-Value ="SelectedToolOption">
-      <MudRadio Value=@("Metric")>Metric</MudRadio>
-      <MudRadio Value=@("UK")>UK</MudRadio>
-      <MudRadio Value=@("US")>US</MudRadio>
+    <MudRadioGroup T="string" @bind-Value ="SelectedToolOption">
+      <MudRadio T="string" @onclick='() => ChangedSelection("Metric")' Value=@("Metric")>Metric</MudRadio>
+      <MudRadio T="string" @onclick='() => ChangedSelection("UK")' Value=@("UK")>UK</MudRadio>
+      <MudRadio T="string" @onclick='() => ChangedSelection("US")' Value=@("US")>US</MudRadio>
     </MudRadioGroup>
     @if(CraftType == "Knitting")
     {
@@ -74,9 +74,9 @@
     }
   }
 
-  private void IncrementCount()
+  private void ChangedSelection(string value)
   {
-    currentCount++;
+    selectedSizeOption = value;
   }
 
   private List<string> _listOfWeights = [];
@@ -88,7 +88,7 @@
     DataTable sizeDt = tool.TryGetToolSize();
     _listOfWeights = yarn.YarnWeights(dt);
     _listOfSizes = tool.ToolSizes(sizeDt);
-
   }
+
 }
 
