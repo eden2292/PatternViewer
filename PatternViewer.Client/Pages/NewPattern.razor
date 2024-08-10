@@ -5,7 +5,7 @@
 
 <MudText Typo="Typo.h4">New Pattern</MudText>
 
-<MudContainer MaxWidth="MaxWidth.Small">
+<MudContainer MaxWidth="MaxWidth.Small" >
   <MudPaper>
     <MudTextField Value="HelperText" Label="Pattern Name" Variant="Variant.Outlined" Required ="true"/>
     <MudTextField Value="HelperText" Label="Yarn Brand" Variant="Variant.Outlined"/>
@@ -43,12 +43,6 @@
         }
       </MudSelect>
     }
-    <MudSelect T="string" Label="Weight" Variant="Variant.Outlined">
-      @foreach (string yarnWeight in _listOfWeights)
-      {
-        <MudSelectItem Value="@yarnWeight" />
-      }
-    </MudSelect>
     <MudTextField Value="HelperText" Label="Washing Instructions" Variant="Variant.Outlined"/>
     <MudTextField Value="HelperText" Label="Existing row?" Variant="Variant.Outlined"/>
   </MudPaper>
