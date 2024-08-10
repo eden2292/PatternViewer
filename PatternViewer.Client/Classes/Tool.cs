@@ -5,7 +5,7 @@ namespace PatternViewer.Client.Classes
 {
   public class Tool
   {
-    readonly SqlConnection connection = new("Data Source=DESKTOP-HQKTKN8;Initial Catalog=PatternViewer;Integrated Security=True;");
+    //readonly SqlConnection connection = new("Data Source=DESKTOP-HQKTKN8;Initial Catalog=PatternViewer;Integrated Security=True;");
     public string? SelectedOption;
 
     /// <summary>
@@ -15,14 +15,10 @@ namespace PatternViewer.Client.Classes
     public DataTable TryGetToolSize()
     {
       DataTable sizeDt = new();
-      using (connection)
+
+      using (SqlConnection connection =  new("Data Source=DESKTOP-HQKTKN8;Initial Catalog=PatternViewer;Integrated Security=True;"))
       {
-        string query = SelectedOption switch
-        {
-          "UK" => "SELECT UKSize FROM ToolSize",
-          "US" => "SELECT USSize FROM ToolSize",
-          _ => "SELECT Metric FROM ToolSize"
-        };
+        string query = "SELECT * FROM ToolSize";
         using SqlDataAdapter adapter = new(query, connection);
         adapter.Fill(sizeDt);
       }
@@ -30,34 +26,28 @@ namespace PatternViewer.Client.Classes
     }
 
     /// <summary>
-    /// Create a List of toolnames from the data table
+    /// Create a List of Tool sizes from the data table
     /// </summary>
     /// <param name="dt">The data table</param>
-    /// <returns>A list of pattern names</returns>
+    /// <returns>A list of tool sizes</returns>
     public List<string> ToolSizes(DataTable sizeDt, string selectedOption)
     {
       List<string> toolSizes = [];
       foreach (DataRow dr in sizeDt.Rows)
       {
-        string toolSize;
-        switch (selectedOption)
+#pragma warning disable CS8600
+        string toolSize = selectedOption switch
         {
-          case "Metric":
-            toolSize = dr["Metric"].ToString();
-            break;
-          case "US":
-            toolSize = dr["USSize"].ToString();
-            break;
-          case "UK":
-            toolSize = dr["UKSize"].ToString();
-            break;
-          default:
-            toolSize = dr["Metric"].ToString();
-            break;
-        }
+          "Metric" => dr["Metric"].ToString(),
+          "US" => dr["USSize"].ToString(),
+          "UK" => dr["UKSize"].ToString(),
+          _ => dr["Metric"].ToString(),
+        };
+#pragma warning restore CS8600
         toolSizes.Add(toolSize);
       }
       return toolSizes;
     }
+
   }
 }

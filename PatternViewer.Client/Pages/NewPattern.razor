@@ -52,9 +52,6 @@
   Yarn yarn = new Yarn();
   Tool tool = new Tool();
 
-  private int currentCount = 0;
-  private string selectedSizeOption;
-
   public string HelperText { get; set; }
   public string CraftType { get; set; }
   public string SelectedToolOption { get; set; }
@@ -62,7 +59,7 @@
   private void OnRadioChanged(ChangeEventArgs e)
   {
     SelectedToolOption = e.Value.ToString();
-    UpdateToolSizes(""); // Update the dropdown based on the selected radio button
+    //UpdateToolSizes(""); // Update the dropdown based on the selected radio button
   }
 
   private List<string> _listOfWeights = [];
@@ -71,19 +68,21 @@
   protected override void OnInitialized()
   {
     DataTable dt = yarn.TryGetYarnWeights();
+    DataTable sizeDt = tool.TryGetToolSize();
     _listOfWeights = yarn.YarnWeights(dt);
-    UpdateToolSizes("");
+    //UpdateToolSizes("");
+    _listOfSizes = tool.ToolSizes(sizeDt, "");
   }
 
   private void UpdateToolSizes(string newOption)
   {
-    DataTable sizeDt = tool.TryGetToolSize();
+      DataTable sizeDt = tool.TryGetToolSize();
 
-    if (SelectedToolOption == "UK")
+    if (newOption == "UK")
     {
       _listOfSizes = tool.ToolSizes(sizeDt, "UK");
     }
-    else if (SelectedToolOption == "US")
+    else if (newOption == "US")
     {
       _listOfSizes = tool.ToolSizes(sizeDt, "US");
     }
