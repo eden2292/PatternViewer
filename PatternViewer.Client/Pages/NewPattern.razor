@@ -21,11 +21,11 @@
       <MudToggleItem Value="@("Crochet")"/>
     </MudToggleGroup>
     <MudRadioGroup T="string" @bind-Value ="SelectedToolOption">
-      <MudRadio T="string" @onclick='() => ChangedSelection("Metric")' Value=@("Metric")>Metric</MudRadio>
-      <MudRadio T="string" @onclick='() => ChangedSelection("UK")' Value=@("UK")>UK</MudRadio>
-      <MudRadio T="string" @onclick='() => ChangedSelection("US")' Value=@("US")>US</MudRadio>
+      <MudRadio T="string" Value=@("Metric")>Metric</MudRadio>
+      <MudRadio T="string" Value=@("UK")>UK</MudRadio>
+      <MudRadio T="string" Value=@("US")>US</MudRadio>
     </MudRadioGroup>
-    @if(CraftType == "Knitting")
+    @if (CraftType == "Knitting")
     {
       <MudSelect T="string" Label="Needle Size" Variant="Variant.Outlined">
         @foreach (string needleSize in _listOfSizes)
@@ -57,20 +57,12 @@
 
   public string HelperText { get; set; }
   public string CraftType { get; set; }
+  public string SelectedToolOption { get; set; }
 
-  public string SelectedToolOption
+  private void OnRadioChanged(ChangeEventArgs e)
   {
-    get => selectedSizeOption;
-    set
-    {
-      selectedSizeOption = value;
-      tool.SelectedOption = value; 
-    }
-  }
-
-  private void ChangedSelection(string value)
-  {
-    selectedSizeOption = value;
+    SelectedToolOption = e.Value.ToString();
+    UpdateToolSizes(); // Update the dropdown based on the selected radio button
   }
 
   private List<string> _listOfWeights = [];
@@ -79,9 +71,26 @@
   protected override void OnInitialized()
   {
     DataTable dt = yarn.TryGetYarnWeights();
-    DataTable sizeDt = tool.TryGetToolSize();
     _listOfWeights = yarn.YarnWeights(dt);
-    _listOfSizes = tool.ToolSizes(sizeDt);
+    UpdateToolSizes();
+  }
+
+  private void UpdateToolSizes()
+  {
+    DataTable sizeDt = tool.TryGetToolSize();
+
+    if (SelectedToolOption == "UK")
+    {
+      _listOfSizes = tool.ToolSizes(sizeDt, "UK");
+    }
+    else if (SelectedToolOption == "US")
+    {
+      _listOfSizes = tool.ToolSizes(sizeDt, "US");
+    }
+    else // Metric
+    {
+      _listOfSizes = tool.ToolSizes(sizeDt, "Metric");
+    }
   }
 
 }

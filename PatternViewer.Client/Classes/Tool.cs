@@ -31,17 +31,17 @@ namespace PatternViewer.Client.Classes
     }
 
     /// <summary>
-    /// Create a List of pattern names from the data table
+    /// Create a List of tool sizes from the data table
     /// </summary>
     /// <param name="dt">The data table</param>
     /// <returns>A list of pattern names</returns>
-    public List<string> ToolSizes(DataTable sizeDt)
+    public List<string> ToolSizes(DataTable sizeDt, string selectedOption)
     {
       List<string> toolSizes = [];
       foreach (DataRow dr in sizeDt.Rows)
       {
-        string toolSize = string.Empty;
-        switch(SelectedOption)
+        string toolSize;
+        switch (selectedOption)
         {
           case "Metric":
             toolSize = dr["Metric"].ToString();
