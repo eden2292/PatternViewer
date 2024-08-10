@@ -15,7 +15,6 @@ namespace PatternViewer.Client.Classes
     public DataTable TryGetToolSize()
     {
       DataTable sizeDt = new();
-
       using (connection)
       {
         string query = SelectedOption switch
@@ -31,7 +30,7 @@ namespace PatternViewer.Client.Classes
     }
 
     /// <summary>
-    /// Create a List of tool sizes from the data table
+    /// Create a List of toolnames from the data table
     /// </summary>
     /// <param name="dt">The data table</param>
     /// <returns>A list of pattern names</returns>

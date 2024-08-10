@@ -20,7 +20,7 @@
       <MudToggleItem Value="@("Knitting")"/>
       <MudToggleItem Value="@("Crochet")"/>
     </MudToggleGroup>
-    <MudRadioGroup T="string" @bind-Value ="SelectedToolOption">
+    <MudRadioGroup T="string" Value ="SelectedToolOption" ValueChanged="UpdateToolSizes">
       <MudRadio T="string" Value=@("Metric")>Metric</MudRadio>
       <MudRadio T="string" Value=@("UK")>UK</MudRadio>
       <MudRadio T="string" Value=@("US")>US</MudRadio>
@@ -62,7 +62,7 @@
   private void OnRadioChanged(ChangeEventArgs e)
   {
     SelectedToolOption = e.Value.ToString();
-    UpdateToolSizes(); // Update the dropdown based on the selected radio button
+    UpdateToolSizes(""); // Update the dropdown based on the selected radio button
   }
 
   private List<string> _listOfWeights = [];
@@ -72,10 +72,10 @@
   {
     DataTable dt = yarn.TryGetYarnWeights();
     _listOfWeights = yarn.YarnWeights(dt);
-    UpdateToolSizes();
+    UpdateToolSizes("");
   }
 
-  private void UpdateToolSizes()
+  private void UpdateToolSizes(string newOption)
   {
     DataTable sizeDt = tool.TryGetToolSize();
 
