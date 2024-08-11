@@ -20,7 +20,7 @@
       <MudToggleItem Value="@("Knitting")"/>
       <MudToggleItem Value="@("Crochet")"/>
     </MudToggleGroup>
-    <MudRadioGroup T="string" Value ="SelectedToolOption" ValueChanged="UpdateToolSizes">
+    <MudRadioGroup T="string" Value="@SelectedToolOption" ValueChanged="UpdateToolSizes">
       <MudRadio T="string" Value=@("Metric")>Metric</MudRadio>
       <MudRadio T="string" Value=@("UK")>UK</MudRadio>
       <MudRadio T="string" Value=@("US")>US</MudRadio>
@@ -59,7 +59,6 @@
   private void OnRadioChanged(ChangeEventArgs e)
   {
     SelectedToolOption = e.Value.ToString();
-    //UpdateToolSizes(""); // Update the dropdown based on the selected radio button
   }
 
   private List<string> _listOfWeights = [];
@@ -70,27 +69,28 @@
     DataTable dt = yarn.TryGetYarnWeights();
     DataTable sizeDt = tool.TryGetToolSize();
     _listOfWeights = yarn.YarnWeights(dt);
-    //UpdateToolSizes("");
     _listOfSizes = tool.ToolSizes(sizeDt, "");
   }
 
   private void UpdateToolSizes(string newOption)
   {
+    if (newOption != null)
+    {
+      SelectedToolOption = newOption;
       DataTable sizeDt = tool.TryGetToolSize();
-
-    if (newOption == "UK")
-    {
-      _listOfSizes = tool.ToolSizes(sizeDt, "UK");
-    }
-    else if (newOption == "US")
-    {
-      _listOfSizes = tool.ToolSizes(sizeDt, "US");
-    }
-    else // Metric
-    {
-      _listOfSizes = tool.ToolSizes(sizeDt, "Metric");
+      if (newOption == "UK")
+      {
+        _listOfSizes = tool.ToolSizes(sizeDt, "UK");
+      }
+      else if (newOption == "US")
+      {
+        _listOfSizes = tool.ToolSizes(sizeDt, "US");
+      }
+      else // Metric
+      {
+        _listOfSizes = tool.ToolSizes(sizeDt, "Metric");
+      }
     }
   }
-
 }
 

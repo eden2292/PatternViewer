@@ -5,9 +5,6 @@ namespace PatternViewer.Client.Classes
 {
   public class Tool
   {
-    //readonly SqlConnection connection = new("Data Source=DESKTOP-HQKTKN8;Initial Catalog=PatternViewer;Integrated Security=True;");
-    public string? SelectedOption;
-
     /// <summary>
     /// create a data table of tool sizes 
     /// </summary>
